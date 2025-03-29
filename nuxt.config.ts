@@ -52,7 +52,6 @@ export default defineNuxtConfig({
   compatibilityDate: '2024-07-08',
 
   nitro: {
-    preset: 'cloudflare',
     experimental: {
       // Enable Server API documentation within NuxtHub
       openAPI: true,
@@ -90,15 +89,5 @@ export default defineNuxtConfig({
     },
     baseUrl: '/',
     defaultLocale: 'en-US',
-  },
-  app: {
-    head: {
-      meta: [
-        { 
-          'http-equiv': 'Content-Security-Policy',
-          'content': 'upgrade-insecure-requests' 
-        }
-      ]
-    }
   },
 })
