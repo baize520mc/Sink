@@ -55,6 +55,7 @@ export default defineNuxtConfig({
     experimental: {
       // Enable Server API documentation within NuxtHub
       openAPI: true,
+      preset: 'cloudflare'
     },
   },
 
@@ -89,5 +90,15 @@ export default defineNuxtConfig({
     },
     baseUrl: '/',
     defaultLocale: 'en-US',
+  },
+  app: {
+    head: {
+      meta: [
+        { 
+          'http-equiv': 'Content-Security-Policy',
+          'content': 'upgrade-insecure-requests' 
+        }
+      ]
+    }
   },
 })
